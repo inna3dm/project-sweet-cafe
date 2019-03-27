@@ -4,26 +4,34 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width">
         <title>Sweet Cafe</title>
+        <link href="https://fonts.googleapis.com/css?family=Alex+Brush" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
         <link rel="stylesheet" href="css/index.css">
     </head>
     <body>
         <header>
-            <div class="main-logo"><a href="#"><h1>Sweet Cafe<h1></a></div>
-            <div id="nav-icon"></div>
-            <nav>
-                <a href="#">Hours & location</a>
-                <a href="#">Menu</a>
-                <a href="#">About</a>
-                <a href="#">Delivery</a>
-                <a href="#">Reservation</a>
-            </nav>
-            <div class="banner">
-                <img src="img/main-strawberry-dessert.jpg" alt="Strawberry dessert">
+            <div class="main-nav-wrapper">
+                <h1 class="logo"><a href="/">Sweet Cafe</a></h1>
+                <nav class="nav-bar">
+                    <button class="nav-bar-toggle">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </button>
+                    <ul class="nav-bar-menu">
+                        <li><a href="#food-menu">Menu</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#reservation">Reservation</a></li>
+                        <li><a href="#footer">Contact us</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="hero">
+                <img class="img-responsive" src="img/main-strawberry-dessert.jpg" alt="Strawberry dessert">
             </div>
         </header>
         <main>
-            <div class="info menu">
+            <div class="info menu" id="food-menu">
                 <h1>Our menu</h1>
                 <p>Lorem ipsum dolor sit amet, nec ut malis mazim. Quo eu amet sanctus, cum ludus quaestio cu. Natum aliquip commune mel id. No est error aliquip.Labore detracto ocurreret vis ad.
                     <br>
@@ -37,10 +45,10 @@
                 <button class="button"><a href="#">View menu</a></button>
             </div>
             <div class="gallery carousel">
-                <img src="img/main-reservation.jpg" alt="Sweets and coffee">
-                <img src="img/main-chocolate-mousse.jpg" alt="Chocolate mousse">
-                <img src="img/main-cakes-set.jpg" alt="Cakes set">
-                <img src="img/main-cheesecake.jpg" alt="Cheesecake">
+                <img class="img-responsive" src="img/main-reservation.jpg" alt="Sweets and coffee">
+                <img class="img-responsive" src="img/main-chocolate-mousse.jpg" alt="Chocolate mousse">
+                <img class="img-responsive" src="img/main-cakes-set.jpg" alt="Cakes set">
+                <img class="img-responsive" src="img/main-cheesecake.jpg" alt="Cheesecake">
                 <i class="fas fa-chevron-left"></i>
                 <i class="fas fa-chevron-right"></i>
             </div>
@@ -49,7 +57,7 @@
                 <div>
                     <article class="specials-item">
                         <h3>Double chocolate cake</h3>
-                        <img src="img/specials-double-chocolate-cake.jpg" alt="Double chocolate cake">
+                        <img class="img-responsive" src="img/specials-double-chocolate-cake.jpg" alt="Double chocolate cake">
                         <p>Molten chocolate cake served warm with a scoop of vanilla ice cream and strawberry coulis.</p>
                         <ul class data-count>
                             <li>
@@ -73,7 +81,7 @@
                     </article>
                     <article class="specials-item">
                         <h3>Monster cookie</h3>
-                        <img src="img/specials-monster-cookie.jpg" alt="Monster cookie">
+                        <img class="img-responsive" src="img/specials-monster-cookie.jpg" alt="Monster cookie">
                         <p>A homemade chocolate chip cookie, topped with vanilla ice cream, hot fudge, whipped cream, nuts and a cherry.</p>
                         <ul class data-count>
                             <li>
@@ -97,7 +105,7 @@
                     </article>
                     <article class="specials-item">
                         <h3>Chocolate pudding</h3>
-                        <img src="img/specials-chocolate-pudding.jpg" alt="Chocolate pudding">
+                        <img class="img-responsive" src="img/specials-chocolate-pudding.jpg" alt="Chocolate pudding">
                         <p>Our signature croissants baked with custard and chocolate chips. Topped with vanilla ice cream, caramel sauce.</p>
                         <ul class data-count>
                             <li>
@@ -123,9 +131,9 @@
                 <a href="#">More</a>
             </div>
             <div class="gallery">
-                <img src="img/main-cappuccino.jpg" alt="Cappuccino">
+                <img class="img-responsive" src="img/main-cappuccino.jpg" alt="Cappuccino">
             </div>
-            <div class="info about">
+            <div class="info about" id="about">
                 <h1>About us</h1>
                 <p>Lorem ipsum dolor sit amet, nec ut malis mazim. Quo eu amet sanctus, cum ludus quaestio cu. Natum aliquip commune mel id. No est error aliquip.Labore detracto ocurreret vis ad.
                     Sea aeque intellegam cu.
@@ -136,9 +144,9 @@
                 <a href="#">Learn more about us</a>
             </div>
             <div class="gallery">
-                <img src="img/main-chocolate.jpg" alt="Chocolate and coffee">
+                <img class="img-responsive" src="img/main-chocolate.jpg" alt="Chocolate and coffee">
             </div>
-            <div class="info reservation">
+            <div class="info reservation" id="reservation">
                 <h1>Book your table</h1>
                 <p>Reserve on OpenTable, or just walk-in. We hold a number of tables just for walk-ins.</p>
                 <form method="post" action="https://formspree.io/inna3dm@gmail.com">
@@ -164,7 +172,7 @@
             </div>
         </main>
         <footer>
-            <div class="footer-info">
+            <div class="footer-info" id="footer">
                 <section>
                     <h2>Location</h2>
                     <p>Lviv. Rynok Square, 1</p>
@@ -189,5 +197,7 @@
                 © 2019 Sweet Cafe. All rights reserved
             </div>
         </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="js/index.js"></script>
     </body>
 </html>
