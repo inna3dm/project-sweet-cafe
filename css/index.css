@@ -18,6 +18,7 @@ h1, h2, h3, p {
 /* Header */
 .main-nav-wrapper {
     max-width: 980px;
+    z-index: 10;
     background-color: var(--secondary-color);
     position: fixed;
     top: 0;
@@ -25,8 +26,7 @@ h1, h2, h3, p {
     height: 70px;
     display: flex;
     align-items: center;
-    box-shadow: 0 2px 3px 0px #545454c7;
-    /*justify-content: space-between;*/
+    box-shadow: 0 2px 3px 0 #545454c7;
 }
 
 .logo {
@@ -44,8 +44,6 @@ h1, h2, h3, p {
 }
 
 .nav-bar {
-    /*display: flex;*/
-    /*flex-wrap: wrap;*/
     margin-left: auto;
 }
 
@@ -78,8 +76,7 @@ h1, h2, h3, p {
     list-style-type: none;
     margin: 0;
     padding: 10px 0;
-    /*border-bottom: 3px solid black;*/
-    box-shadow: -1px 1px 6px 0px #9a9a9a;
+    box-shadow: -1px 1px 6px 0 #9a9a9a;
 }
 
 .nav-bar.is-shown .nav-bar-menu {
@@ -91,6 +88,25 @@ h1, h2, h3, p {
     padding: 10px 15px;
     color: black;
     text-decoration: none;
+}
+
+/*.parallax {*/
+    /*position: relative;*/
+    /*height: 486px;*/
+    /*background: url("../img/main-chocolate.jpg") no-repeat center center fixed;*/
+    /*background-size: 100%;*/
+/*}*/
+
+.info-specials {
+
+}
+
+.specials-item {
+    display: grid;
+}
+
+#success-section {
+    display:none;
 }
 
 @media (min-width: 576px) {
@@ -127,6 +143,7 @@ h1, h2, h3, p {
 
 /* Common */
 .img-responsive {
+
     max-width: 100%;
 }
 
