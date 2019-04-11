@@ -11,55 +11,37 @@ $('.nav-bar-menu a').on('click', function() {
   $(this).closest('.nav-bar').removeClass('is-shown')
 });
 
+$('.nav-bar-menu a').on('click', function() {
+  console.log(this.getAttribute('href'), $(this.getAttribute('href')), $(this.getAttribute('href')).offset().top)
+  $([document.documentElement, document.body]).animate({
+    scrollTop: $(this.getAttribute('href')).offset().top - 70
+  }, 250);
+  return false;
+});
 
-//Form
-// const formElement = document.getElementById('reservation-form');
-// const successElement = document.getElementById('success-section');
-//
-// const formDataToJson = formData => {
-//   const entries = formData.entries();
-//   const dataObj = Array.from(entries).reduce( (data, [key, value]) => {
-//     data[key] = value;
-//     return data;
-//   }, {});
-//   return JSON.stringify(dataObj);
-// };
-// const toggleForm = bool => {
-//   formElement.reset();
-//   if (bool) {
-//     successElement.style.display = 'none';
-//   }
-//   else {
-//     successElement.style.display = 'block';
-//   }
-// }
-//
-// formElement.addEventListener('submit', function (e) {
-//   e.preventDefault();
-//
-//   const formData = new FormData(this);
-//   // form data
-//
-//   formData.append('_subject', 'Submission');
-//
-//   fetch('https://formspree.io/'inna3dm@gmail.com', {
-//     method: 'post',
-//     body: formDataToJson(formData),
-//     headers: {
-//       'Content-Type': 'application/json'
-//     }
-//   })
-//     .catch(e => {
-//       console.log('form-error')
-//     })
-//     .then(r => r.json())
-//     .then(response => {
-//       if (response.success === 'email sent') {
-//         console.log(response);
-//         toggleForm();
-//       }
-//       else {
-//         alert('Sorry, something went wrong. Please, call us 0322-33-22-11')
-//       }
-//     })
-// })
+
+fetch('/project-sweet-cafe/data/specials.json').then(response => response.json()).then(json => {
+  console.log(json);
+  let template = document.querySelector('#special-template');
+  let templateContent = template.innerHTML;
+  document.querySelector('.specials').innerHTML = json.specials.map(special => {
+    return templateContent.replace('${TITLE}', special.title)
+      .replace('${URL}', special.image.url)
+      .replace('${ALT}', special.image.alt)
+      .replace('${DESCRIPTION}', special.description)
+      .replace('${PRICE}', special.price)
+  }).join('');
+
+  $('.specials-item a').on('click', function() {
+    $(this).toggleClass('active');
+    console.log(11)
+    return false;
+  });
+});
+
+
+
+
+
+
+

@@ -1,0 +1,31 @@
+{
+  "specials": [
+    {
+      "title": "Double chocolate cake",
+      "image": {
+        "url": "/project-sweet-cafe/img/specials-double-chocolate-cake.jpg",
+        "alt": "Double chocolate cake"
+      },
+      "description": "Molten chocolate cake served warm with a scoop of vanilla ice cream and strawberry coulis.",
+      "price": "$ 3.49"
+    },
+    {
+      "title": "Monster cookie",
+      "image": {
+        "url": "/project-sweet-cafe/img/specials-monster-cookie.jpg",
+        "alt": "Monster cookie"
+      },
+      "description": "Molten chocolate cake served warm with a scoop of vanilla ice cream and strawberry coulis.",
+      "price": "$ 3.49"
+    },
+    {
+      "title": "Chocolate pudding",
+      "image": {
+        "url": "/project-sweet-cafe/img/specials-chocolate-pudding.jpg",
+        "alt": "Chocolate pudding"
+      },
+      "description": "Molten chocolate cake served warm with a scoop of vanilla ice cream and strawberry coulis.",
+      "price": "$ 3.49"
+    }
+  ]
+}
