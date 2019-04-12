@@ -21,7 +21,6 @@ $('.nav-bar-menu a').on('click', function() {
 
 
 fetch('/project-sweet-cafe/data/specials.json').then(response => response.json()).then(json => {
-  console.log(json);
   let template = document.querySelector('#special-template');
   let templateContent = template.innerHTML;
   document.querySelector('.specials').innerHTML = json.specials.map(special => {
@@ -34,7 +33,6 @@ fetch('/project-sweet-cafe/data/specials.json').then(response => response.json()
 
   $('.specials-item a').on('click', function() {
     $(this).toggleClass('active');
-    console.log(11)
     return false;
   });
 });
