@@ -1,16 +1,12 @@
 :root {
-    --main-color: white;
-    --secondary-color: black;
     font-family: Helvetica, sans-serif;
 }
-
 body {
     max-width: 980px;
     min-width: 300px;
     margin: auto;
     padding-top: 70px;
 }
-
 h1, h2, h3, p {
     margin: 0;
     padding: 0;
@@ -20,7 +16,7 @@ h1, h2, h3, p {
 .main-nav-wrapper {
     max-width: 980px;
     z-index: 10;
-    background-color: var(--secondary-color);
+    background-color: black;
     position: fixed;
     top: 0;
     width: 100%;
@@ -30,43 +26,36 @@ h1, h2, h3, p {
     white-space: nowrap;
     box-shadow: 0 2px 3px 0 #545454c7;
 }
-
 .logo {
     font-family: 'Alex Brush', cursive;
     font-size: 40px;
     line-height: 40px;
     margin: 10px 20px;
 }
-
 .logo a {
     display: inline-block;
     text-decoration: none;
-    color: var(--main-color);
+    color: white;
 }
-
 .nav-bar {
     margin-left: auto;
 }
-
 .nav-bar-toggle {
     padding: 10px;
     margin-right: 10px;
     border: 0;
     background-color: transparent;
 }
-
 .nav-bar-toggle span {
     display: block;
-    background: var(--main-color);
+    background: white;
     width: 40px;
     height: 5px;
     margin: 6px;
 }
-
 .nav-bar.is-shown .nav-bar-toggle span {
     background-color: #F0B545;
 }
-
 .nav-bar-menu {
     display: none;
     position: absolute;
@@ -79,11 +68,9 @@ h1, h2, h3, p {
     padding: 10px 0;
     box-shadow: -1px 1px 6px 0 #9a9a9a;
 }
-
 .nav-bar.is-shown .nav-bar-menu {
     display: block;
 }
-
 .nav-bar-menu a {
     display: block;
     padding: 10px 15px;
@@ -97,11 +84,9 @@ h1, h2, h3, p {
     font-size: 18px;
     line-height: 1.8em;
 }
-
 .info p {
     text-indent: 20px;
 }
-
 .info h1 {
     text-align: center;
     margin: 10px;
@@ -109,7 +94,6 @@ h1, h2, h3, p {
     font-weight: bold;
     text-transform: uppercase;
 }
-
 .info > a {
     display: block;
     margin: 16px auto 20px;
@@ -121,9 +105,7 @@ h1, h2, h3, p {
     text-transform: uppercase;
     font-weight: bold;
     font-size: 16px;
-
 }
-
 .info > a:hover {
     text-decoration: none;
     box-shadow: -1px 1px 8px 0 #a9a296;
@@ -132,8 +114,7 @@ h1, h2, h3, p {
 .parallax {
     position: relative;
     height: 300px;
-    background: url("../img/main-chocolate.jpg") no-repeat center center fixed;
-    /*---------change img-----------*/
+    background: url("../img/main-sweets.jpeg") no-repeat center center fixed;
     background-size: cover;
 }
 
@@ -143,24 +124,31 @@ h1, h2, h3, p {
     font-size: 22px;
     font-weight: bold;
 }
-
 .specials-item > div {
     max-width: 340px;
     display: block;
     border: 1px solid grey;
     margin: 20px auto 40px;
 }
-
+.specials-item > div:hover {
+    box-shadow: -2px 2px 14px 0 #736f69;
+}
+.specials-item h3 {
+    white-space: nowrap;
+}
 .specials-item p {
+    display: block;
     padding: 10px;
     text-indent: 0;
     text-align: center;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
-
 .special-data {
     display: flex;
     padding: 0 10px;
     justify-content: space-between;
+    align-content: center;
 }
 .specials-item ul {
     display: inline-flex;
@@ -169,7 +157,6 @@ h1, h2, h3, p {
     list-style-type: none;
     justify-content: left;
 }
-
 .specials-item li {
     width: 32px;
     height: 32px;
@@ -177,7 +164,6 @@ h1, h2, h3, p {
     text-align: center;
     position: relative;
 }
-
 .specials-item a {
     color: lightgrey;
 }
@@ -214,11 +200,9 @@ h1, h2, h3, p {
 .specials-item a:hover + .tooltip-text {
     visibility: visible;
 }
-
 .specials-item a.active {
     color: #f0b545;
 }
-
 .price {
     display: block;
     font-weight: bold;
@@ -227,12 +211,10 @@ h1, h2, h3, p {
 .reservation {
     text-align: center;
 }
-
 .reservation-form {
     max-width: 100%;
     padding: 20px 20px 0 20px;
 }
-
 .reservation-form label {
     display: none;
 }
@@ -248,22 +230,18 @@ h1, h2, h3, p {
     padding: 2px 16px;
     overflow: scroll;
 }
-
 .date-and-time {
     display: inline-flex;
     justify-content: space-between;
     width: 100%;
 }
-
 #reservation-date {
     background-color: white;
 }
-
 #reservation-time {
     margin-left: 20px;
     background-color: white;
 }
-
 #submit-reservation {
     display: block;
     margin: 18px auto 20px;
@@ -279,14 +257,12 @@ h1, h2, h3, p {
     background-color: #211e1e;
     font-size: 20px;
 }
-
 .footer-info section {
     display: block;
     margin: 10px auto;
     text-align: center;
     color: white;
 }
-
 .footer-info h2 {
     color: #f0b545;
     margin: 10px;
@@ -295,7 +271,6 @@ h1, h2, h3, p {
     font-weight: bold;
     white-space: nowrap;
 }
-
 .footer-info ul {
     display: flex;
     margin: 5px auto;
@@ -303,22 +278,17 @@ h1, h2, h3, p {
     justify-content: center;
     list-style-type: none;
 }
-
 .footer-info li {
     margin: 10px 10px;
     height: 32px;
     width: 32px;
 }
-
 .footer-info li a {
     color: white;
 }
-
 .footer-info li a:hover {
     color: #f0b545;
 }
-
-
 .footer-copyright {
     padding-top: 5px;
     padding-bottom: 5px;
@@ -328,18 +298,11 @@ h1, h2, h3, p {
     font-size: 18px;
 }
 
-
-
-
-
-
-
 @media (min-width: 576px) {
 
     .nav-bar-toggle {
         display: none;
     }
-
     .nav-bar-menu {
         display: flex;
         position: static;
@@ -348,68 +311,68 @@ h1, h2, h3, p {
         background-color: transparent;
         margin-right: 10px;
     }
-
     .nav-bar-menu a {
         color: white;
     }
-
     .nav-bar-menu a:hover {
         background-color: #353535;
     }
-
     .nav-bar-menu a.active {
         color: #F0B545;
     }
-
     .nav-bar.is-shown .nav-bar-menu {
         display: flex;
     }
 
-    .specials-item {
-
+    .specials {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 10px;
+        justify-content: center;
     }
-
-
-
-
-
-
+    .specials-item p {
+        height: 200px;
+    }
 
     .footer-info {
         display: flex;
         justify-content: space-around;
+        font-size: 18px;
     }
-
     .footer-info section {
         margin: 5px;
     }
+    .footer-copyright {
+        font-size: 14px;
+    }
 }
 
-
 @media (min-width: 768px) {
+    .specials {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 10px;
+    }
+
     .reservation-form {
         max-width: 800px;
         margin: auto;
     }
-
     .reservation-form label {
         display: inline-block;
         width: 26%;
         text-align: left;
         vertical-align: top;
     }
-
     .reservation-form input,
     .reservation-form textarea {
         display: inline-block;
         width: 72%;
     }
-
     .reservation-form input::placeholder,
     .reservation-form textarea::placeholder {
         visibility: hidden;
     }
-
     .date-and-time {
         width: 72%;
     }
@@ -418,7 +381,6 @@ h1, h2, h3, p {
 
     /* Common */
 .img-responsive {
-
     max-width: 100%;
 }
 
